@@ -24,6 +24,10 @@ This widget does not replace the "button" widget with action set to "Start proce
 
 "Target URL on success" property of submit button must be empty. If you set a value it will conflict with redirect next task custom widget.
 
+## Compatibility
+
+This widget has been developed and tested on Bonita BPM Community edition 7.1.3.
+
 ## Known limitations
 Implementation rely on polling the Engine to get available tasks for current user in current case. Polling approach will lead to an additional load on your Bonita server.
 
