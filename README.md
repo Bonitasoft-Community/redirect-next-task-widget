@@ -1,5 +1,5 @@
-# redirect-next-task-widget
-A widget to automatically redirect user to next task after case instantiation or task submission.
+# Redirect to next task widget
+A widget to automatically redirect user to next task (within the same process instance) after case instantiation or task submission.
 
 ## Usage
 You need to add the provided custom widget (`redirectNextTask`) to your page and configure the following properties:
@@ -26,12 +26,17 @@ This widget does not replace the "button" widget with action set to "Start proce
 
 ## Compatibility
 
-This widget has been developed and tested on Bonita BPM Community edition 7.1.3.
+This widget has been developed and tested on Bonita BPM Community edition 7.1.5.
 
 ## Known limitations
 Implementation rely on polling the Engine to get available tasks for current user in current case. Polling approach will lead to an additional load on your Bonita server.
 
 Note that for page flow use cases it is usually a good solution to implement it as a single task form. You can refer to [available example](https://github.com/Bonitasoft-Community/pageflow-form-example) for further details.
 
+This custom widget only support redirection to task within the same process instance. Meaning that it will not redirect user to a task created by a call activity child process.
+
 ## Future improvement
 Behavior of this custom widget can be merged with standard button for action set to "Start process" and "Submit task".
+
+## Issues
+Please report issues and improvement requests using GitHub issues tracker.
